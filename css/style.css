@@ -6669,7 +6669,7 @@ button.bg-dark:focus {
   width:35%;
   font-size: 20px !important;
   margin-bottom: -30px !important;
-  margin-left: -12px !important;
+  margin-left: 0px !important;
 }
 
 
@@ -9044,7 +9044,7 @@ h1, h2, h3, h4, h5,
 .experience{
   padding:40px 0px 40px 20px;
   background-color: rgba(255, 255, 255, 0.1);
-  /* margin-top: -30px !important; */
+  margin-left: 0px !important;
 }
 .experience-container {
   display: flex;
