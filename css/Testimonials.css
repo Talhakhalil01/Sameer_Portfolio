@@ -1,0 +1,243 @@
+
+/* Fonts */
+:root {
+    --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Raleway",  sans-serif;
+    --nav-font: "Poppins",  sans-serif;
+  }
+  
+  /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+  :root { 
+    --background-color: red; /* Background color for the entire website, including individual sections */
+    --default-color: #4e4e4e; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #0a090f; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #0078ff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  }
+  
+  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+  :root {
+    --nav-color: #ffffff;  /* The default color of the main navmenu links */
+    --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #0078ff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  }
+  
+  /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+  
+  .light-background {
+    --background-color: #f9f9f9;
+    --surface-color: #ffffff;
+  }
+  
+  .dark-background {
+    --background-color: #060606;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --surface-color: #252525;
+    --contrast-color: #ffffff;
+  }
+  
+  .accent-background {
+    --background-color: #0078ff;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --accent-color: #ffffff;
+    --surface-color: #3393ff;
+    --contrast-color: #ffffff;
+  }
+  
+  
+  /*--------------------------------------------------------------
+  # Scroll Top Button
+  --------------------------------------------------------------*/
+  .scroll-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: -15px;
+    z-index: 99999;
+    background-color: orange;
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    transition: all 0.4s;
+  }
+  
+  .scroll-top i {
+    font-size: 24px;
+    color: var(--contrast-color);
+    line-height: 0;
+  }
+  
+  .scroll-top:hover {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+    color: var(--contrast-color);
+  }
+  
+  .scroll-top.active {
+    visibility: visible;
+    opacity: 1;
+    bottom: 15px;
+  }
+  
+  /*--------------------------------------------------------------
+  # Disable aos animation delay on mobile devices
+  --------------------------------------------------------------*/
+  @media screen and (max-width: 768px) {
+    [data-aos-delay] {
+      transition-delay: 0 !important;
+    }
+  }
+  
+
+  
+ 
+ 
+  .projects-done-container{
+       /* background-color: #0078ff; */
+
+  }
+  /*--------------------------------------------------------------
+  # Testimonials Section
+  --------------------------------------------------------------*/
+  .testimonials {
+    padding: 80px 0;
+    position: relative;
+  }
+  
+  .testimonials:before {
+    content: "";
+    /* background: color-mix(in srgb, var(--background-color), transparent 30%); */
+    background-color: orange;
+    position: absolute;
+    inset: 0;
+    /* z-index: 2; */
+  }
+
+  
+  .testimonials .container {
+    position: relative;
+    /* z-index: 3; */
+    /* background-color: aqua; */
+    margin-bottom: -50px !important;
+  }
+  
+  .testimonials .testimonials-carousel,
+  .testimonials .testimonials-slider {
+    overflow: hidden;
+  }
+  
+  .testimonials .testimonial-item {
+    text-align: center;
+  }
+  
+  .testimonials .testimonial-item .testimonial-img {
+    width: 100px;
+    border-radius: 50%;
+    border: 6px solid color-mix(in srgb, var(--default-color), transparent 85%);
+    margin: 0 auto;
+  }
+  
+  .testimonials .testimonial-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+  }
+  
+  .testimonials .testimonial-item h4 {
+    font-size: 14px;
+    margin: 0 0 15px 0;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+  }
+  
+  .testimonials .testimonial-item .stars {
+    margin-bottom: 15px;
+  }
+  
+
+  .testimonials .testimonial-item .stars i {
+    color: blue;
+    margin: 0 1px;
+  }
+
+  .testimonials .testimonial-item p span {
+    color: #ffffff !important;
+    
+  }
+
+  /* .bi-quote::before {
+    content: "\f6b0";
+}
+.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} */
+  
+  .testimonials .testimonial-item .quote-icon-left,
+  .testimonials .testimonial-item .quote-icon-right {
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    /* color:blue; */
+    font-size: 26px;
+    line-height: 0;
+  }
+  
+  .testimonials .testimonial-item .quote-icon-left {
+    display: inline-block;
+    left: -5px;
+    position: relative;
+  }
+  
+  .testimonials .testimonial-item .quote-icon-right {
+    display: inline-block;
+    right: -5px;
+    position: relative;
+    top: 10px;
+    transform: scale(-1, -1);
+  }
+  
+  .testimonials .testimonial-item p {
+    font-style: italic;
+    margin: 0 auto 15px auto;
+  }
+  
+  .testimonials .swiper-wrapper {
+    height: auto;
+  }
+  
+  .testimonials .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .testimonials .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: color-mix(in srgb, var(--default-color), transparent 50%);
+    opacity: 0.5;
+  }
+  
+  .testimonials .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--default-color);
+    opacity: 1;
+  }
+  
+  @media (min-width: 992px) {
+    .testimonials .testimonial-item p {
+      width: 80%;
+    }
+  }
+  
+  
