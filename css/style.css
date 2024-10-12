@@ -44,7 +44,9 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* overflow-x: hidden !important; */
+ }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
@@ -58,6 +60,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #000000 !important;
+  /* overflow-x: hidden !important;  */
  }
 
 [tabindex="-1"]:focus {
@@ -4802,7 +4805,7 @@ a.close.disabled {
   border-radius: 0.3rem;
   outline: 0; }
 
-.modal-backdrop {
+/* .modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -4813,7 +4816,7 @@ a.close.disabled {
   .modal-backdrop.fade {
     opacity: 0; }
   .modal-backdrop.show {
-    opacity: 0.5; }
+    opacity: 0.5; } */
 
 .modal-header {
   display: -webkit-box;
@@ -8629,12 +8632,12 @@ h1, h2, h3, h4, h5,
               z-index: 1;
               padding: 1em; }
 
-              .owl-carousel.home-slider .slider-item .slider-text .one-forth .text {
-                 /* background-color: #005cbf; */
+              /* .owl-carousel.home-slider .slider-item .slider-text .one-forth .text {
+                 background-color: #005cbf;
               }
               .owl-carousel.home-slider .slider-item .slider-text .subheading {
-                  /* float:left;  */
-            }  
+                  float:left; 
+            }   */
             
         }
           .owl-carousel.home-slider .slider-item .slider-text .one-forth .text {
@@ -9045,6 +9048,8 @@ h1, h2, h3, h4, h5,
   padding:40px 0px 40px 20px;
   background-color: rgba(255, 255, 255, 0.1);
   margin-left: 0px !important;
+  margin-right:0px !important;
+
 }
 .experience-container {
   display: flex;
@@ -9843,6 +9848,7 @@ textarea.form-control {
       color: #fff;
       border: 1px solid transparent; }
 
+
 .contact-section .contact-info p a {
   color: #1a1a1a; }
 
@@ -9854,6 +9860,13 @@ textarea.form-control {
   -ms-border-radius: 4px;
   border-radius: 4px; }
   @media (max-width: 991.98px) {
+    #contact-section{
+      overflow-x: hidden !important;
+    }
+    .contact-img{
+      display: none;
+      background-image: none;
+    }
     .contact-section .box {
       margin-bottom: 30px; } }
   .contact-section .box .icon {

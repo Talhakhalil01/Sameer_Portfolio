@@ -64,24 +64,25 @@
 
 
 	var onePageClick = function() {
-
-		$(document).on('click', '.project-navbar-2 a[href^="#"]', function (event) {
-
+		$(document).on('click', '#ftco-nav .nav-link[href^="#"]', function(event) {
+			console.log("Link clicked:", $(this).attr('href')); // To check if the event is firing
+	
 			event.preventDefault();
+			var href = $(this).attr('href');
 	
-			var href = $.attr(this, 'href');
-	
+			// Scroll animation
 			$('html, body').animate({
-				scrollTop: $($.attr(this, 'href')).offset().top - 70
+				scrollTop: $(href).offset().top - 70
 			}, 500, function() {
-				// Close the menu after the scroll completes
-				$('#ftco-nav').removeClass('show');
+				console.log("***Navigated to:", href); // To confirm navigation
+				$('.navbar-collapse').removeClass('show');
 			});
 		});
-	
 	};
 	
 	onePageClick();
+	
+	
 	
 	
 
@@ -216,26 +217,27 @@
 
 	}
 	counter();
+
 	/**
 	 * Scroll top button
 	 */
-	let scrollTop = document.querySelector('.scroll-top');
+	// let scrollTop = document.querySelector('.scroll-top');
 
-	function toggleScrollTop() {
-	if (scrollTop) {
-		window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-	}
-	}
-	scrollTop.addEventListener('click', (e) => {
-	e.preventDefault();
-	window.scrollTo({
-		top: 0,
-		behavior: 'smooth'
-	});
-	});
+	// function toggleScrollTop() {
+	// if (scrollTop) {
+	// 	window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+	// }
+	// }
+	// scrollTop.addEventListener('click', (e) => {
+	// e.preventDefault();
+	// window.scrollTo({
+	// 	top: 0,
+	// 	behavior: 'smooth'
+	// });
+	// });
 
-	window.addEventListener('load', toggleScrollTop);
-	document.addEventListener('scroll', toggleScrollTop);
+	// window.addEventListener('load', toggleScrollTop);
+	// document.addEventListener('scroll', toggleScrollTop);
 
 	var contentWayPoint = function() {
 		var i = 0;
