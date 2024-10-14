@@ -8236,7 +8236,7 @@ h1, h2, h3, h4, h5,
       max-height: 80vh;
       min-height: 40vh;
       max-width:100%;
-      background-color:green;
+/*       background-color:green; */
       overflow-y: auto;
       /* overflow: auto; */
       /* max-height:200vh !important; */
