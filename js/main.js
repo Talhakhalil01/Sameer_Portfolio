@@ -86,31 +86,31 @@
 	
 	
 
-	var carousel = function() {
-		$('.home-slider').owlCarousel({
-	    loop:true,
-	    autoplay: true,
-	    margin:0,
-	    animateOut: 'fadeOut',
-	    animateIn: 'fadeIn',
-	    nav:false,
-	    autoplayHoverPause: false,
-	    items: 1,
-	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
-	    responsive:{
-	      0:{
-	        items:1
-	      },
-	      600:{
-	        items:1
-	      },
-	      1000:{
-	        items:1
-	      }
-	    }
-		});
-	};
-	carousel();
+	// var carousel = function() {
+	// 	$('.home-slider').owlCarousel({
+	//     loop:true,
+	//     autoplay: true,
+	//     margin:0,
+	//     animateOut: 'fadeOut',
+	//     animateIn: 'fadeIn',
+	//     nav:false,
+	//     autoplayHoverPause: false,
+	//     items: 1,
+	//     navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
+	//     responsive:{
+	//       0:{
+	//         items:1
+	//       },
+	//       600:{
+	//         items:1
+	//       },
+	//       1000:{
+	//         items:1
+	//       }
+	//     }
+	// 	});
+	// };
+	// carousel();
 
 	$('nav .dropdown').hover(function(){
 		var $this = $(this);
@@ -309,11 +309,11 @@
   document.addEventListener('DOMContentLoaded', function() {
 	const projectLinks = document.querySelectorAll('.project-link');
 	const projects = document.querySelectorAll('.project-element');
+	const projectsSection = document.getElementById('projects-section');
   
 	// Initially hide all projects except the first one
 	projects.forEach((project, index) => {
 	  if (index !== 0) {
-		// Set display to none with !important
 		project.style.setProperty('display', 'none', 'important');
 	  }
 	});
@@ -334,16 +334,6 @@
   
 		// Show the selected project with !important
 		document.getElementById(projectId).style.setProperty('display', 'flex', 'important');
-	  });
-	});
-  });
-  
-  document.addEventListener('DOMContentLoaded', function () {
-	const projectLinks = document.querySelectorAll('.project-link');
-  
-	projectLinks.forEach(link => {
-	  link.addEventListener('click', function (event) {
-		event.preventDefault(); // Prevent the default anchor behavior
   
 		// Remove 'active' class from all project links
 		projectLinks.forEach(link => {
@@ -353,7 +343,8 @@
 		// Add 'active' class to the clicked project link
 		this.classList.add('active');
   
-	
+		// Scroll to the top of the projects section
+		projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	  });
 	});
   });
